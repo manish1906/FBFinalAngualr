@@ -1,0 +1,4 @@
+
+			select FacebookUsers.UserId,FirstName,LastName,CurrentCity,HomeTown,Bio ,ApplicationObjectName as Relationship,CoverPhotos.Photo as cover,ProfilePhotos.Photo as Profilephoto from FacebookUsers,FacebookUserDetails,FBApplicationObjects,CoverPhotos,ProfilePhotos 
+			where FacebookUsers.UserId=FacebookUserDetails.UserId and FacebookUserDetails.RelationshipAO=FBApplicationObjects.ApplicationObjectId and 
+			ProfilePhotos.ProfilePhotoId=FacebookUserDetails.ProfilePhotoId and CoverPhotos.CoverPhotoId=FacebookUserDetails.CoverPhotoId;
